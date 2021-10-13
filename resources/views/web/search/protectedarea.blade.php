@@ -140,7 +140,7 @@
 								</form>
 							</div>
 						</div>
-						{{-- <div  class="filter-group ng-isolate-scope">
+						<div  class="filter-group ng-isolate-scope">
 							<div  class="filter-group rtl-bootstrap" >
 								<a class="inherit" style="text-decoration: none; cursor: pointer;">
 									<h4 >
@@ -217,7 +217,7 @@
 								</div>
 							</div> 
 
-						</div> --}}
+						</div>
 					</div>
 				</div>
 			</div>
