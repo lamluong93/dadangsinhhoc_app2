@@ -13,4 +13,5 @@ Route::prefix('search-species')->group(function(){
 
 Route::prefix('protectedarea')->group(function(){
     Route::get('/', [SearchController::class,'protectedarea'])->name('protectedarea');
+    Route::post('/search-post', [SearchController::class, 'search'])->name('protectedarea-search');
 });

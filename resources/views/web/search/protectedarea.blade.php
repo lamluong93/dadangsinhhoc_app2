@@ -23,7 +23,7 @@
 <!-- Custom CSS -->
 <link rel="stylesheet" href="{{ asset('front/css/custom.css') }}">
 <link rel="stylesheet" href="{{ asset('front/css/vendor.css') }}">
-
+{{-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> --}}
 <!-- Modernizer for Portfolio -->
 <script src="{{ asset('front/js/modernizer.js') }}"></script>
 
@@ -110,7 +110,7 @@
 			<div class="site-drawer__content fill-height col-md-3" style="padding: 0px;">
 				<div class="site-drawer__header">
 					<div  class="site-drawer__bar">
-						<a  tooltip="Everything" class=" site-drawer__bar__icon inherit">
+						<a  href="{{ route('protectedarea') }}" tooltip="Everything" class=" site-drawer__bar__icon inherit">
 							<i class="fa fa-angle-left"></i>
 						</a> 
 						<div class="site-drawer__bar__title">
@@ -118,7 +118,7 @@
 								<span >Khu Bảo Tồn</span>
 							</a>
 						</div> 
-						<a class="discreet inherit site-drawer__bar__icon" style="cursor: pointer;"><!---->
+						<a href="{{ route('protectedarea') }}" class="discreet inherit site-drawer__bar__icon" style="cursor: pointer;">
 							<i class="fa fa-trash"></i>
 						</a>
 					</div>
@@ -127,11 +127,14 @@
 					<div class="site-drawer__section" style="padding-bottom: 0px;">
 						<div class="search-bar search-bar filter-group">
 							<div class="search-bar__term" style="top: 50%; transform: translateY(-50%);">
-								<form action="#" method="post">
+								<form action="{{ route('protectedarea-search') }}" method="post">
+									@csrf
 									<div class="input-group">
 										<input type="text" class="form-control" placeholder="Tìm kiếm tên khu bảo tồn" name="search">
 										<div class="input-group-btn">
-											<button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
+											<button class="btn btn-default" type="submit" style="font-size: 0; margin-left: 0;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+												<path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+											  </svg></button>
 										</div>
 									</div>
 								</form>
