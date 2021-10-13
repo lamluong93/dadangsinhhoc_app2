@@ -1,6 +1,6 @@
 <div id="testimonials" class="parallax section db parallax-off" style="background-image:url('{{ asset('front/images/parallax_04.jpg') }}');">
     <div class="container">
-        <div class="section-title text-center">
+        <div class="section-title text-center" style="height: 20px;">
             <h3>CHÚNG TÔI CẦN BẠN !!!</h3>
             <p style="color: white;">Giúp chúng tôi tuyên truyền tới cộng đồng tầm quan trọng của đa dạng sinh học. </p>
         </div><!-- end title -->
@@ -89,12 +89,11 @@
     </div><!-- end container -->
 </div><!-- end section -->
 
-<div class="parallax section dbcolor">
+<div class="parallax section dbcolor"  style="height: 15px; padding-top: 5px;">
     <div class="container">
         <div >
             <div style="text-align: center;color: white;" >
-                Copyright 2012 - 2021 by Vietnam Environment Administration,<br>
-Ministry of Natural Resources and Environment, Viet Nam
+                Copyright 2012 - 2021 by Vietnam Environment Administration,<br>Ministry of Natural Resources and Environment, Viet Nam
             </div>
             {{-- <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
                 <a href="#"><img src="{{ asset('front/images/logo_02.png') }}" alt="" class="img-repsonsive"></a>
@@ -115,7 +114,7 @@ Ministry of Natural Resources and Environment, Viet Nam
     </div><!-- end container -->
 </div><!-- end section -->
 
-<footer class="footer">
+<!-- <footer class="footer">
     <div class="container">
         <div class="row">
             <div class="col-lg-4 col-md-4 col-xs-12">
@@ -125,8 +124,8 @@ Ministry of Natural Resources and Environment, Viet Nam
                     </div>
                     <p> Integer rutrum ligula eu dignissim laoreet. Pellentesque venenatis nibh sed tellus faucibus bibendum. Sed fermentum est vitae rhoncus molestie. Cum sociis natoque penatibus et magnis dis montes.</p>
                     <p>Sed fermentum est vitae rhoncus molestie. Cum sociis natoque penatibus et magnis dis montes.</p>
-                </div><!-- end clearfix -->
-            </div><!-- end col -->
+                </div>
+            </div>
 
             <div class="col-lg-4 col-md-4 col-xs-12">
                 <div class="widget clearfix">
@@ -140,9 +139,9 @@ Ministry of Natural Resources and Environment, Viet Nam
                         <li><a href="#">About</a></li>
                         <li><a href="#">Faq</a></li>
                         <li><a href="#">Contact</a></li>
-                    </ul><!-- end links -->
-                </div><!-- end clearfix -->
-            </div><!-- end col -->
+                    </ul>
+                </div>
+            </div>
             
             <div class="col-lg-4 col-md-4 col-xs-12">
                 <div class="widget clearfix">
@@ -155,15 +154,15 @@ Ministry of Natural Resources and Environment, Viet Nam
                         <li><a href="#">www.yoursite.com</a></li>
                         <li>PO Box 16122 Collins Street West Victoria 8007 Australia</li>
                         <li>+61 3 8376 6284</li>
-                    </ul><!-- end links -->
-                </div><!-- end clearfix -->
-            </div><!-- end col -->
+                    </ul>
+                </div>
+            </div>
             
-        </div><!-- end row -->
-    </div><!-- end container -->
-</footer><!-- end footer -->
+        </div>
+    </div>
+</footer> -->
 
-<div class="copyrights">
+<!-- <div class="copyrights">
     <div class="container">
         <div class="footer-distributed">
             <div class="footer-left">                   
@@ -177,8 +176,8 @@ Ministry of Natural Resources and Environment, Viet Nam
                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                     <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
                     <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                </ul><!-- end links -->
+                </ul>
             </div>
         </div>
-    </div><!-- end container -->
-</div><!-- end copyrights -->
+    </div>
+</div> -->
