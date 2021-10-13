@@ -95,21 +95,7 @@
             <div style="text-align: center;color: white;" >
                 Copyright 2012 - 2021 by Vietnam Environment Administration,<br>Ministry of Natural Resources and Environment, Viet Nam
             </div>
-            {{-- <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-                <a href="#"><img src="{{ asset('front/images/logo_02.png') }}" alt="" class="img-repsonsive"></a>
-            </div>
-            <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-                <a href="#"><img src="{{ asset('front/images/logo_03.png') }}" alt="" class="img-repsonsive"></a>
-            </div>
-            <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-                <a href="#"><img src="{{ asset('front/images/logo_04.png') }}" alt="" class="img-repsonsive"></a>
-            </div>
-            <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-                <a href="#"><img src="{{ asset('front/images/logo_05.png') }}" alt="" class="img-repsonsive"></a>
-            </div>
-            <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-                <a href="#"><img src="{{ asset('front/images/logo_06.png') }}" alt="" class="img-repsonsive"></a>
-            </div> --}}
+            
         </div><!-- end row -->
     </div><!-- end container -->
 </div><!-- end section -->
@@ -127,22 +113,6 @@
                 </div>
             </div>
 
-            <div class="col-lg-4 col-md-4 col-xs-12">
-                <div class="widget clearfix">
-                    <div class="widget-title">
-                        <h3>Information Link</h3>
-                    </div>
-                    <ul class="footer-links">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Pricing</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Faq</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-            
             <div class="col-lg-4 col-md-4 col-xs-12">
                 <div class="widget clearfix">
                     <div class="widget-title">
