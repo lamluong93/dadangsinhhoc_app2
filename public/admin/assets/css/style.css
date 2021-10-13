@@ -1,0 +1,44 @@
+.text-supersm {
+    font-size: 13px;
+}
+
+.font-size-14 {
+    font-size: 14px;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.text-require {
+    color: red;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#delListGt {
+    font-size: 13px;
+    color: red;
+    text-decoration: underline;
+    padding-left: 1em;
+    cursor: pointer;
+    display: none;
+}
+
+.display-none {
+    display: none;
+}
+
+.border-sp {
+    border: 1px solid #dfdfdf;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: #149b51;
+}
+
+.card-header, .card-body {
+    padding-left: .5em !important;
+    padding-right: .5em !important;
+}
