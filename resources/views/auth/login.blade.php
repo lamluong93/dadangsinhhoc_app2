@@ -1,8 +1,9 @@
 <x-guest-layout>
     <x-auth-card>
         <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
+            <a href="{{ route('web.home') }}">
+                {{--  <x-application-logo class="w-20 h-20 fill-current text-gray-500" />  --}}
+                <img src="{{ asset('front/images/favicon.ico') }}" style="height: 80px;">
             </a>
         </x-slot>
 
@@ -55,5 +56,15 @@
                 <p>Bạn chưa có tài khoản? <a href="{{ route('register')}}" class="text-green-600">Đăng ký tại đây</a></p>
             </div>
         </form>
+
+        <style>
+        .min-h-screen {
+
+            background: rgb(0 255 114 / 59%)!important;
+        }
+        </style>
+
+
     </x-auth-card>
 </x-guest-layout>
+

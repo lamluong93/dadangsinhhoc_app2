@@ -134,7 +134,7 @@
             <div class="row text-left stat-wrap">
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     {{-- <span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i class="flaticon-hosting"></i></span> --}}
-                    <p >15912</p>
+                    <p >15.912</p>
                     <h2>Đơn vị phân loại</h2>
                 </div><!-- end col -->
 
@@ -166,7 +166,6 @@
                     <div class="message-box">
                         
                         <a href="https://vietnamabs.gov.vn/chia-se-cong-bang-va-hop-ly-loi-ich-su-dung-nguon-gen/" style="font-size: 35px;">Chia sẻ công bằng và hợp lý lợi ích sử dụng nguồn gen</a>
-                        <p>Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam risus. Sed a tellus quis mi rhoncus dignissim.</p>
 
                     </div><!-- end messagebox -->
                 </div><!-- end col -->
@@ -187,10 +186,6 @@
 				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
                     <div class="message-box">
                         <a href="https://vietnamabs.gov.vn/hoi-thao-khu-vuc-chia-se-kinh-nghiem-ve-quyen-so-huu-tri-tue-da-dang-sinh-hoc-va-cong-dong-ban-dia-doi-voi-abs-va-tri-thuc-truyen-thong-gan-voi-nguon-gen/" style="font-size: 35px;">Hội thảo khu vực chia sẻ kinh nghiệm về quyền sở hữu trí tuệ, đa dạng sinh học và cộng đồng bản địa ...</a>
-                        
-
-                        <p> Integer rutrum ligula eu dignissim laoreet. Pellentesque venenatis nibh sed tellus faucibus bibendum.</p>
-
                         
                     </div><!-- end messagebox -->
                 </div><!-- end col -->

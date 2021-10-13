@@ -18,7 +18,7 @@
                             <div class="row">
                                 <div class="col-md-12 col-sm-12 text-right">
                                     <div class="big-tagline">
-                                        <h2 ><strong>Hệ thống cơ sở dữ liệu Quốc Gia<br>về đa dạng sinh học Việt Nam</strong></h2>
+                                        <h2 style="text-align: center;" ><strong>Hệ thống cơ sở dữ liệu Hà Nội <br> về đa dạng sinh học</strong></h2>
                                         {{-- <p class="lead">With Landigoo responsive landing page template, you can promote your all hosting, domain and email services. </p> --}}
                                         <div class="col-lg-12">
                                             <form {{-- class="checkdomain form-inline" --}}>
@@ -35,15 +35,15 @@
                                                         <label for="domaincom">Loài</label>
                                                     </div>
                                                     <div class="checkbox checkbox-warning">
-                                                        <input id="domainnet" type="checkbox" class="styled">
+                                                        <input id="domainnet" type="checkbox" class="styled" disabled>
                                                         <label for="domainnet">Bộ dữ liệu</label>
                                                     </div>
                                                     <div class="checkbox checkbox-warning">
-                                                        <input id="domainorg" type="checkbox" class="styled">
+                                                        <input id="domainorg" type="checkbox" class="styled" disabled>
                                                         <label for="domainorg">Cơ quan công bố</label>
                                                     </div>
                                                     <div class="checkbox checkbox-warning">
-                                                        <input id="domaintv" type="checkbox" class="styled">
+                                                        <input id="domaintv" type="checkbox" class="styled" disabled>
                                                         <label for="domaintv">Khu bảo tồn</label>
                                                     </div>
                                                 </div><!-- end checkdomain-wrapper -->
