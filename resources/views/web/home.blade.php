@@ -21,11 +21,12 @@
                                         <h2 style="text-align: center;" ><strong>Hệ thống cơ sở dữ liệu Hà Nội <br> về đa dạng sinh học</strong></h2>
                                         {{-- <p class="lead">With Landigoo responsive landing page template, you can promote your all hosting, domain and email services. </p> --}}
                                         <div class="col-lg-12">
-                                            <form {{-- class="checkdomain form-inline" --}}>
+                                            <form action="{{ route('search-species-post') }}" method="post">
+                                                @csrf
                                                 <div class="checkdomain-wrapper" style="width: 800px;">
                                                     <div class="form-group">
-                                                        <label class="sr-only" for="domainnamehere">Domain name</label>
-                                                        <input type="text" class="form-control" id="domainnamehere" placeholder="Nhập từ khóa tìm kiếm tại đây..">
+                                                        <label class="sr-only" for="domainnamehere">#</label>
+                                                        <input type="text" class="form-control" name="search" id="domainnamehere" placeholder="Nhập từ khóa tìm kiếm tại đây..">
                                                         <button type="submit" class="btn btn-primary grd1"><i class="fa fa-search"></i></button>
                                                     </div>
                                                     <hr>

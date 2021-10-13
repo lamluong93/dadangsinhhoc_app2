@@ -232,7 +232,7 @@
 											tìm kiếm thông tin Khu bảo tồn
 										</span> 
 										<span data-v-664c55df="" class="article-header__category__lower">
-											{{ count($data) }} Kết quả
+											{{ $data->total() }} Kết quả
 										</span>
 									</nav>
 								</div>
@@ -299,8 +299,8 @@
 								</div>
 								@else
 								<div class="emptyInfo">
-									<h3 >
-										Không có kết quả - hãy thử nới lỏng các bộ lọc của bạn
+									<h3>
+										Không tìm thấy kết quả phù hợp
 									</h3>
 								</div>
 								@endif

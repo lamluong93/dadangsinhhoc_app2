@@ -55,7 +55,7 @@
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
 			<div class="container-fluid">
 				<a class="navbar-brand" href="{{ route('web.home') }}">
-					<img src="{{ asset('front/images/logo-hosting.png') }}" alt="logo" />
+					<img src="{{ asset('front/images/ico.png') }}" alt="logo" style="width:60px;" />
 				</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-host" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="icon-bar"></span>
@@ -110,7 +110,7 @@
 			<div class="site-drawer__content fill-height col-md-3" style="padding: 0px;">
 				<div class="site-drawer__header">
 					<div  class="site-drawer__bar">
-						<a  tooltip="Everything" class="site-drawer__bar__icon inherit">
+						<a href="{{ route('search-species') }}" tooltip="Everything" class="site-drawer__bar__icon inherit">
 							<i class="fa fa-angle-left"></i>
 						</a> 
 						<div class="site-drawer__bar__title">
@@ -118,7 +118,7 @@
 								<span >Loài</span>
 							</a>
 						</div> 
-						<a class="discreet inherit site-drawer__bar__icon" style="cursor: pointer;"><!---->
+						<a href="{{ route('search-species') }}" class="discreet inherit site-drawer__bar__icon" style="cursor: pointer;"><!---->
 							<i class="fa fa-trash"></i>
 						</a>
 
@@ -128,11 +128,17 @@
 					<div class="site-drawer__section" style="padding-bottom: 0px;">
 						<div class="search-bar search-bar filter-group">
 							<div  class="search-bar__term" style="top: 50%; transform: translateY(-50%);">
-								<input  type="text" autocomplete="off" placeholder="Tìm kiếm" class="fit-suggestions"> 
-								<a  class="search-bar__search" style="cursor: pointer;">
-									<span class="sr-only">Tìm kiếm</span>
-									<i class="fa fa-search"></i>
-								</a>
+								<form action="{{ route('search-species-post') }}" method="post">
+									@csrf
+									<div class="input-group">
+										<input type="text" class="form-control" placeholder="Tìm kiếm tên loài" name="search" value="@if (isset($text)){{$text}}@endif">
+										<div class="input-group-btn">
+											<button class="btn btn-default" type="submit" style="font-size: 0; margin-left: 0;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+												<path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+											  </svg></button>
+										</div>
+									</div>
+								</form>
 							</div>
 						</div>
 						<div  class="filter-group ng-isolate-scope">
@@ -295,165 +301,82 @@
 											Tìm kiếm thông tin loài
 										</span> 
 										<span data-v-664c55df="" class="article-header__category__lower">
-											25.414 
-											Kết quả
+											{{ $data->total() }} kết quả
 										</span>
 									</nav>
 								</div>
 							</div>
 						</div>
-					</div> <!----> 
-					<div  class="loading-container" style="display: none;">
-						<div  style="position: relative; height: 65px; width: 65px;">
-							<svg viewBox="25 25 50 50" class="circular">
-								<circle cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" class="path">
+					</div>
 
-								</circle>
-							</svg>
-						</div>
-					</div> 
-					<div  class="horizontal-stripe light-background fill-height" style="">
-						<div  class="fill-height" style="display: none;">
-
-						</div> 
+					<div  class="horizontal-stripe light-background fill-height">
 						<div class="container--narrow" style="width: 100%;">
 							<div class="row">
-								<div  class="col-xs-12">
-									<div class="card__stripe" style="">
+								@if (count($data))
+								<div class="col-xs-12">
+									<div class="card__stripe">
 										<div class="card__content clearfix">
-											<div  style="width: 100%;">
-												<div class="card m-b-05 searchCard rtl-supported rtl-bootstrap ng-scope">
-													<div  class="card__stripe">
-														<div class="card__content">
-															<a class="uppercase-first inherit searchCard__type hoverBox ng-scope" style="cursor: pointer;">
-																Bậc phân loại:
-																Giới
-															</a> 
-															<h3  dir="auto" class="searchCard__headline">
-																<a name="Plantae" class="ng-isolate-scope">
-																	Plantae (Thực vật)
-																</a>
-															</h3>
-														</div>
-													</div> 
-													<div class="card__stripe">
-														<div class="card__content searchCard__content clearfix">
-															<p  class="discreet classification-list ng-binding ng-scope">
-																Cây phân loại:
-																<span>
-																	<span >Plantae (Thực vật) </span>
-																</span> <!----> <!----> <!----> <!----> <!---->
-															</p> 
-															<ul class="list-chips">
-																<li >
-																	<a class="uppercase-first ng-scope" style="cursor: pointer;">
-																		Trạng thái:
-																		<span  style="text-transform: capitalize;">accepted
-																		</span>
+											@foreach ($data as $item)
+												<div style="width: 100%;">
+													<div class="card m-b-05 searchCard rtl-supported rtl-bootstrap ng-scope">
+														<div  class="card__stripe">
+															<div class="card__content">
+																<a class="uppercase-first inherit searchCard__type hoverBox ng-scope" style="background-color: #74b274; color: #ffffff;">
+																	Bậc phân loại: Loài
+																</a> 
+																<h3 dir="auto" class="searchCard__headline">
+																	<a name="Plantae" class="ng-isolate-scope" style="color: #1976d2">
+																		{{ $item->tenkhoahoc }}
 																	</a>
-																</li> 
-																<li >
-																	<a  class="uppercase-first ng-scope" style="cursor: pointer;">
-																		Giới
+																</h3>
+																@if ($item->tentiengviet!=null)
+																<h3 dir="auto" class="searchCard__headline">
+																	<a name="Plantae" class="ng-isolate-scope" style="color: #1976d2">
+																		({{ $item->tentiengviet }})
 																	</a>
-																</li> 
-																<li >
-																	<a >
-																		<span  class="loaded">
-																			9.474
-																			<span  style="margin-left: 5px;">
-																				Loài
+																</h3>
+																@endif
+															</div>
+														</div> 
+														<div class="card__stripe">
+															<div class="card__content searchCard__content clearfix">
+																<p class="discreet classification-list ng-binding ng-scope">
+																	Trạng thái: {{ $item->trangthai }}
+																</p>
+																<ul class="list-chips">
+																	<li >
+																		<a class="uppercase-first ng-scope" style="cursor: pointer;">
+																			Thành phố Hà Nội
+																		</a>
+																	</li>
+																	{{-- <li>
+																		<a>
+																			<span class="loaded">
+																				Phân loại: {{ $item->phanloai }}
 																			</span>
-																		</span>
-																	</a>
-																</li>
-															</ul>
+																		</a>
+																	</li> --}}
+																</ul>
+															</div>
 														</div>
 													</div>
 												</div>
-											</div>
-											<div style="width: 100%;">
-												<div  class="card m-b-05 searchCard rtl-supported rtl-bootstrap ng-scope">
-													<div  class="card__stripe">
-														<div  class="card__content">
-															<a  class="uppercase-first inherit searchCard__type hoverBox ng-scope" style="cursor: pointer;">
-																Bậc phân loại:
-																Giới
-															</a> 
-															<h3 dir="auto" class="searchCard__headline">
-																<a  name="Animalia" class="ng-isolate-scope">
-																	Animalia (Động vật)
-																</a>
-															</h3>
-														</div>
-													</div> 
-													<div class="card__stripe">
-														<div class="card__content searchCard__content clearfix">
-															<p  class="discreet classification-list ng-binding ng-scope">
-																Cây phân loại:
-																<span >
-																	<span>Animalia (Động vật) </span>
-																</span> <!----> <!----> <!----> <!----> <!---->
-															</p> 
-															<ul  class="list-chips">
-																<li >
-																	<a  class="uppercase-first ng-scope" style="cursor: pointer;">
-																		Trạng thái:
-																		<span  style="text-transform: capitalize;">accepted</span>
-																	</a>
-																</li> 
-																<li >
-																	<a  class="uppercase-first ng-scope" style="cursor: pointer;">
-																		Giới
-																	</a>
-																</li> 
-																<li >
-																	<a >
-																		<span  class="loaded">
-																			7.945
-																			<span style="margin-left: 5px;">
-																				Loài
-																			</span>
-																		</span>
-																	</a>
-																</li>
-															</ul>
-														</div>
-													</div>
-												</div>
-											</div>
-
-
-										</div> 
-										<ul  class="pagination" style=""><!----> 
-											<li class="disabled">
-												<a  tabindex="-1">‹‹</a>
-											</li> 
-											<li  class="page-item active">
-												<a tabindex="0">1</a>
-											</li>
-											<li class="page-item">
-												<a  tabindex="0">2</a>
-											</li>
-											<li class="page-item disabled">
-												<a tabindex="0" class="">…</a>
-											</li>
-											<li class="page-item">
-												<a  tabindex="0">2541</a>
-											</li>
-											<li class="page-item"
-											><a tabindex="0">2542</a>
-										</li> 
-										<li  class="">
-											<a tabindex="0">››</a>
-										</li> <!---->
-									</ul>
-								</div> 
-								<div class="emptyInfo" style="display: none;">
+											@endforeach
+										</div>
+									</div>
+									<div class="d-flex align-items-center justify-content-center">
+										<div class="d-flex flex-column">
+											{{ $data->links() }}
+										</div>
+									</div>
+								</div>
+								@else
+								<div class="emptyInfo">
 									<h3 >
-										Không có kết quả - hãy thử nới lỏng các bộ lọc của bạn
+										Không tìm thấy kết quả phù hợp
 									</h3>
 								</div>
+								@endif
 							</div>
 						</div>
 					</div>

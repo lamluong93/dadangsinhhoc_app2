@@ -17,8 +17,29 @@ class SearchController extends Controller
      */
     public function species()
     {
-        $data = Loai::select('')->paginate(25);
-        return view('web.search.search-species');
+        $data = Loai::select('tenkhoahoc', 'tentiengviet', 'trangthai')->paginate(25);
+        return view('web.search.search-species', compact('data'));
+    }
+    
+    public function searchSpecies(Request $request) {
+        $validator = Validator::make($request->all(), [
+                '_token' => 'required',
+                'search' => 'required',
+            ],
+            [
+                '_token.required' => 'Lỗi cài đặt bảo mật Form',
+                'search.required' => 'Vui lòng gõ từ khóa tìm kiếm',
+            ]
+        );
+
+        if ($validator->fails()) return redirect()->route('search-species');
+
+        $data = Loai::select('tenkhoahoc', 'tentiengviet', 'trangthai')
+            ->where('tenkhoahoc', 'LIKE', '%'.$request->input('search').'%')
+            ->orWhere('tentiengviet', 'LIKE', '%'.$request->input('search').'%')
+            ->paginate(100);
+        $text = $request->input('search');
+        return view('web.search.search-species', compact('data', 'text'));
     }
 
     public function protectedarea()
@@ -38,13 +59,14 @@ class SearchController extends Controller
             ]
         );
 
-        if ($validator->fails()) return back()->withErrors($validator);
+        if ($validator->fails()) return redirect()->route('protectedarea');
 
         $data = KhuBaoTon::select('ten', 'tentienganh', 'phancap', 'mota', 'phanloai', 'mucdodadangsinhhoc')
             ->where('ten', 'LIKE', '%'.$request->input('search').'%')
-            ->orWhere('tentienganh', '%'.$request->input('search').'%')
-            ->paginate(25);
-        return view('web.search.protectedarea', compact('data'));
+            ->orWhere('tentienganh', 'LIKE', '%'.$request->input('search').'%')
+            ->paginate(100);
+        $text = $request->input('search');
+        return view('web.search.protectedarea', compact('data', 'text'));
     }
     
 }

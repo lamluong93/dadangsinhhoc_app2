@@ -9,6 +9,7 @@ Route::prefix('web')->group(function(){
 
 Route::prefix('search-species')->group(function(){
     Route::get('/', [SearchController::class,'species'])->name('search-species');
+    Route::post('/search-post-species', [SearchController::class,'searchSpecies'])->name('search-species-post');
 });
 
 Route::prefix('protectedarea')->group(function(){
