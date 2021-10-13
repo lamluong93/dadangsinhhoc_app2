@@ -64,8 +64,8 @@
 				</button>
 				<div class="collapse navbar-collapse" id="navbars-host">
 					<ul class="navbar-nav ml-auto">
-						<li class="nav-item active"><a class="nav-link" href="{{ route('web.home') }}">Trang chủ</a></li>
-						<li class="nav-item dropdown">
+						<li class="nav-item"><a class="nav-link" href="{{ route('web.home') }}">Trang chủ</a></li>
+						<li class="nav-item active dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Tra cứu</a>
 							<div class="dropdown-menu" aria-labelledby="dropdown-a">
 								<a class="dropdown-item" href="hosting.html">Bộ dữ liệu</a>
