@@ -17,6 +17,7 @@ class SearchController extends Controller
      */
     public function species()
     {
+        $data = Loai::select('')->paginate(25);
         return view('web.search.search-species');
     }
 

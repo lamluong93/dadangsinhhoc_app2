@@ -292,7 +292,7 @@
 								<div class="col-xs-12">
 									<nav  class="article-header__category article-header__category--deep" style="text-align: center;">
 										<span data-v-664c55df="" class="article-header__category__upper ng-scope" style="width: unset;">
-											Tìm kiếm thông tin loài tại Việt Nam
+											Tìm kiếm thông tin loài
 										</span> 
 										<span data-v-664c55df="" class="article-header__category__lower">
 											25.414 
